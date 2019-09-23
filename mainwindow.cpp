@@ -28,8 +28,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_inicializar_clicked()
 {
-    adalin.rand();
-    printWn();
+    if(!pointVector.empty())
+    {
+        adalin.rand();
+        printWn();
+    }
 }
 
 void MainWindow::on_loadFile_clicked()
